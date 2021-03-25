@@ -62,8 +62,8 @@ def intro():
                 "boring human. Too bad! ")
             creature = "human"
             break
-            else:
-                print(
+        else:
+            print(
                     "Ahh come on. I asked you a simple question."
                     "I expect a simple answer!")
     printpause("But okay... enough talking. Let's start the game: \n\n\n")
@@ -101,9 +101,9 @@ def house():
     printpause(
         "You approach the door of the houset2t"
         "You are about to knock when the door opens and out steps a "
-        + villain + "t2t"
+        + villain + ".t2t"
         "Epp! This must be the creature you have heard about, a true "
-        + villain + "t2t"
+        + villain + ".t2t"
         "The " + villain + " attacks yout2t")
     if creature == villain:
         printpause(
@@ -157,9 +157,9 @@ def fight():
     else:
         printpause(
             "As the " + villain + " moves to attack you unleash your new "
-            + weapon + "."
+            + weapon + ".t2t"
             "The " + weapon + " is massive and you feel "
-            "very powerful as you lift it towards the attack."
+            "very powerful as you lift it towards the attack.t2t"
             "The " + villain + " looks at your shiny new toy"
             " and runs away!t2t"
             "You have rid the town of the" + villain + "."
@@ -181,7 +181,7 @@ def cave():
             "Turns out to be only a very small cave.t2t"
             "Your eye catches a glint of metal behind a rock.t2t"
             "You have found the " + weapon + "!t2t"
-            "You discard your silly old " + default_weapon + "and take the new "
+            "You discard your silly old " + default_weapon + " and take the new "
             + weapon + " with you.t2t")
     # if weapon is already new, the player won't find anything anymore
     else:
