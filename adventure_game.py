@@ -70,10 +70,12 @@ def intro():
     return creature
 
 
-# plays the scene that happens on the field, returns house or cave as the next scene
+# plays the scene that happens on the field, returns
+# house or cave as the next scene
 def field():
     printpause(
-        "You find yourself standing in an open field, filled with grass and yellow wildflowers. t2t"
+        "You find yourself standing in an open field, filled"
+        " with grass and yellow wildflowers. t2t"
         "Rumor has it that some wicked creature is somewhere around here,"
         " and has been terrifying the nearby village.t2t"
         "...t2t"
@@ -140,17 +142,20 @@ def fight():
     if creature.__eq__(villain):
         printpause(
             "The " + villain + " runs towards you and opens their arms.t2t"
-            '"MY dear friend", they say "why don`t you come in and join me for a good old '
+            '"MY dear friend", they say "why don`t you come in '
+            'and join me for a good old '
             + villain + "-dinner?t2t"
             "You are slightly confused because you realise that the creature"
             " everyone fears is a "
             + creature + "just like you.t2t"
-            "But of course you accept the invite and join your new " + villain + "-friend.")
+            "But of course you accept the invite and join your new "
+            + villain + "-friend.")
         return "friends"
     elif weapon.__eq__(default_weapon):
         printpause(
             "You would do your best...t2t"
-            "but your " + weapon + " breaks and you cannot match the " + villain + ".t2t"
+            "but your " + weapon + " breaks and you cannot match the "
+            + villain + ".t2t"
             "You have been defeated!")
         return "game over"
     # has a weapon to win the fight and is not the same creature
@@ -171,7 +176,8 @@ def fight():
 # if they do not have the default weapon anymore
 def cave():
     global weapon
-    # if weapon already picked up nothing happens, otherwise weapon = random weapon name
+    # if weapon already picked up nothing happens,
+    # otherwise weapon = random weapon name
     # if weapon is still default, player picks up a brand new weapon
     if weapon.__eq__(default_weapon):
         number = random.randint(0, len(new_weapons)-1)
@@ -181,7 +187,8 @@ def cave():
             "Turns out to be only a very small cave.t2t"
             "Your eye catches a glint of metal behind a rock.t2t"
             "You have found the " + weapon + "!t2t"
-            "You discard your silly old " + default_weapon + " and take the new "
+            "You discard your silly old " + default_weapon
+            + " and take the new "
             + weapon + " with you.t2t")
     # if weapon is already new, the player won't find anything anymore
     else:
@@ -231,7 +238,8 @@ def play_game(skip_intro=0):  # function that starts the play_game
             elif choice == "game over":
                 printpause("xxxt2t\n\n\n\nGAME OVER\n\n\n")
 
-                # when the player decides to run away, he ends up back on the field
+                # when the player decides to run away,
+                # he ends up back on the field
         elif choice == "run away":
             printpause("You ran away, back to the field where you started. ")
             play_game(1)
@@ -256,4 +264,5 @@ def play_game(skip_intro=0):  # function that starts the play_game
 
 
 # start  play_game
-play_game()
+if __name__ == '__main__':
+    play_game()
